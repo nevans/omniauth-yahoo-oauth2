@@ -1,13 +1,13 @@
-## omniauth-yahoo-oauth2 ##
+## omniauth-aol-oauth2 ##
 
-An unofficial, hastily-written Oauth2 OmniAuth strategy for Yahoo. Uses the
+An unofficial, hastily-written Oauth2 OmniAuth strategy for AOL. Uses the
 authorization flow described at
 https://developer.yahoo.com/oauth2/guide/flows_authcode/.
 
 Built using https://github.com/intridea/omniauth-oauth2.
 
 ## Setup ##
-`gem install omniauth-yahoo-oauth2`
+`gem install omniauth-aol-oauth2`
 
 Create an app at https://developer.yahoo.com/apps to get a Yahoo client ID and
 secret.
@@ -16,7 +16,7 @@ secret.
 ```ruby
 # In an initializer
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :yahoo_oauth2, yahoo_client_id, yahoo_secret, name: 'yahoo'
+  provider :aol_oauth2, aol_client_id, aol_secret, name: 'aol'
 end
 ```
 

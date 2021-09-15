@@ -5,7 +5,7 @@ require 'omniauth/strategies/oauth2'
 
 module OmniAuth
   module Strategies
-    class YahooOauth2 < OmniAuth::Strategies::OAuth2
+    class AolOauth2 < OmniAuth::Strategies::OAuth2
 
       OPEN_ID_CONNECT_SCOPES = "openid,profile,email"
 

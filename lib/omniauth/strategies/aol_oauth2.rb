@@ -10,17 +10,17 @@ module OmniAuth
       OPEN_ID_CONNECT_SCOPES = "openid,profile,email"
 
       ALLOWED_ISSUERS = %w[
-        https://api.login.yahoo.com
-        api.login.yahoo.com
-        login.yahoo.com
+        https://api.login.aol.com
+        api.login.aol.com
+        login.aol.com
       ].freeze
 
-      option :name, 'yahoo'
+      option :name, 'aol'
 
       option :userinfo_url, "/openid/v1/userinfo"
 
       option :client_options, {
-        site:              "https://api.login.yahoo.com",
+        site:              "https://api.login.aol.com",
         authorize_url:     "/oauth2/request_auth",
         token_url:         "/oauth2/get_token",
       }

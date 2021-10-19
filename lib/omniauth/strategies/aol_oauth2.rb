@@ -7,14 +7,6 @@ module OmniAuth
   module Strategies
     class AolOauth2 < OmniAuth::Strategies::OAuth2
 
-      OPEN_ID_CONNECT_SCOPES = "openid,profile,email"
-
-      ALLOWED_ISSUERS = %w[
-        https://api.login.aol.com
-        api.login.aol.com
-        login.aol.com
-      ].freeze
-
       option :name, 'aol'
 
       option :userinfo_url, "/openid/v1/userinfo"
@@ -125,6 +117,15 @@ module OmniAuth
         end
       end
 
+      def issuers
+        @allowed_issuers = %w[
+          https://api.login.#{options.name}.com
+          api.login.#{options.name}.com
+          login.#{options.name}.com
+        ].freeze
+        @allowed_issuers
+      end
+
       # This is copied from the omniauth-google-oauth2 gem
       def decode_info_token
         unless options[:skip_jwt] || access_token['id_token'].nil?
@@ -134,7 +135,7 @@ module OmniAuth
           # JWT.decode is false since no verification key is provided.
           ::JWT::Verify.verify_claims(decoded,
                                       verify_iss: true,
-                                      iss: ALLOWED_ISSUERS,
+                                      iss: issuers,
                                       verify_aud: true,
                                       aud: options.client_id,
                                       verify_sub: false,

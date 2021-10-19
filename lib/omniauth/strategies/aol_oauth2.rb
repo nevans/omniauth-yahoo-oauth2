@@ -118,7 +118,7 @@ module OmniAuth
       end
 
       def issuers
-        @allowed_issuers = %w[
+        @allowed_issuers = %W[
           https://api.login.#{options.name}.com
           api.login.#{options.name}.com
           login.#{options.name}.com

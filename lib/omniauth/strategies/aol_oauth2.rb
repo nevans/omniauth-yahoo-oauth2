@@ -9,10 +9,12 @@ module OmniAuth
 
       option :name, 'aol'
 
+      option :host, 'login.aol.com'
+
       option :userinfo_url, "/openid/v1/userinfo"
 
       option :client_options, {
-        site:              "https://api.login.aol.com",
+        site:              "https://api.#{options.host}",
         authorize_url:     "/oauth2/request_auth",
         token_url:         "/oauth2/get_token",
       }
@@ -119,9 +121,9 @@ module OmniAuth
 
       def issuers
         @allowed_issuers = %W[
-          https://api.login.#{options.name}.com
-          api.login.#{options.name}.com
-          login.#{options.name}.com
+          https://api.#{options.host}
+          api.#{options.host}
+          #{options.host}
         ].freeze
         @allowed_issuers
       end

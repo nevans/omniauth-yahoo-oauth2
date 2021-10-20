@@ -14,7 +14,7 @@ module OmniAuth
       option :userinfo_url, "/openid/v1/userinfo"
 
       option :client_options, {
-        site:              "https://api.#{host}",
+        site:              "https://api.login.aol.com",
         authorize_url:     "/oauth2/request_auth",
         token_url:         "/oauth2/get_token",
       }

@@ -13,16 +13,16 @@ module OmniAuth
 
       option :userinfo_url, "/openid/v1/userinfo"
 
-      option :issuers, %w[
-          https://api.login.aol.com
-          api.login.aol.com
-          login.aol.com
-        ].freeze
 
       option :client_options, {
         site:              "https://api.login.aol.com",
         authorize_url:     "/oauth2/request_auth",
         token_url:         "/oauth2/get_token",
+        issuers: %w[
+          https://api.login.aol.com
+          api.login.aol.com
+          login.aol.com
+        ].freeze,
       }
 
       option :skip_jwt, false
@@ -143,7 +143,7 @@ module OmniAuth
           # JWT.decode is false since no verification key is provided.
           ::JWT::Verify.verify_claims(decoded,
                                       verify_iss: true,
-                                      iss: options.issuers,
+                                      iss: options.client_options.issuers,
                                       verify_aud: true,
                                       aud: options.client_id,
                                       verify_sub: false,

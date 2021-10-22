@@ -9,8 +9,6 @@ module OmniAuth
 
       option :name, 'aol'
 
-      option :host, 'login.aol.com'
-
       option :userinfo_url, "/openid/v1/userinfo"
 
 
@@ -123,15 +121,6 @@ module OmniAuth
             session['omniauth.state'] = params[:state] if params[:state]
           end
         end
-      end
-
-      def issuers
-        @allowed_issuers = %W[
-          https://api.#{options.host}
-          api.#{options.host}
-          #{options.host}
-        ].freeze
-        @allowed_issuers
       end
 
       # This is copied from the omniauth-google-oauth2 gem

@@ -1,7 +1,7 @@
 ## omniauth-yahoo-oauth2 ##
 
-An unofficial, hastily-written Oauth2 OmniAuth strategy for AOL. Uses the
-authorization flow described at
+An unofficial OAuth2 OmniAuth strategy for both Yahoo and AOL, which uses
+Yahoo's OAuth2 infrastructure. Uses the authorization flow described at
 https://developer.yahoo.com/oauth2/guide/flows_authcode/.
 
 Built using https://github.com/intridea/omniauth-oauth2.

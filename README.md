@@ -1,4 +1,4 @@
-## omniauth-aol-oauth2 ##
+## omniauth-yahoo-oauth2 ##
 
 An unofficial, hastily-written Oauth2 OmniAuth strategy for AOL. Uses the
 authorization flow described at

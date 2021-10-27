@@ -15,6 +15,7 @@ secret.
 ## Usage ##
 ```ruby
 # In an initializer
+require "omniauth-yahoo-oauth2" # loads strategies for both Yahoo and AOL
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :yahoo, yahoo_client_id, yahoo_secret
   provider :aol,   aol_client_id,   aol_secret

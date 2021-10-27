@@ -132,7 +132,7 @@ module OmniAuth
           # JWT.decode is false since no verification key is provided.
           ::JWT::Verify.verify_claims(decoded,
                                       verify_iss: true,
-                                      iss: options.client_options.issuers,
+                                      iss: options.allowed_jwt_issuers,
                                       verify_aud: true,
                                       aud: options.client_id,
                                       verify_sub: false,

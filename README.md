@@ -7,7 +7,7 @@ https://developer.yahoo.com/oauth2/guide/flows_authcode/.
 Built using https://github.com/intridea/omniauth-oauth2.
 
 ## Setup ##
-`gem install omniauth-aol-oauth2`
+`gem install omniauth-yahoo-oauth2`
 
 Create an app at https://developer.yahoo.com/apps to get a Yahoo client ID and
 secret.

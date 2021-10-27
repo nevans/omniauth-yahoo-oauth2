@@ -16,7 +16,8 @@ secret.
 ```ruby
 # In an initializer
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :aol_oauth2, aol_client_id, aol_secret, name: 'aol'
+  provider :yahoo, yahoo_client_id, yahoo_secret
+  provider :aol,   aol_client_id,   aol_secret
 end
 ```
 

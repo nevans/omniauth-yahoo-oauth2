@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.email         = ['amanji75@gmail.com']
   gem.description   = 'A AOL OAuth2 strategy for OmniAuth.'
   gem.summary       = gem.description
-  gem.homepage      = 'https://github.com/410labs/omniauth-aol-oauth2'
+  gem.homepage      = 'https://github.com/amirmanji/omniauth-aol-oauth2'
   gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split("\n")

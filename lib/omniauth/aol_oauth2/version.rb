@@ -1,5 +1,5 @@
 module OmniAuth
-  module AolOAuth2
+  module YahooOAuth2
     VERSION = '1.3.0'
   end
 end

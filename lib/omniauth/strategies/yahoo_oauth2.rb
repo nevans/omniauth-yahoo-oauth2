@@ -9,12 +9,12 @@ module OmniAuth
 
       OPEN_ID_CONNECT_SCOPES = "openid,profile,email"
 
-      ALLOWED_ISSUERS = %w[
+      option :allowed_jwt_issuers, %w[
         https://api.login.yahoo.com
         api.login.yahoo.com
         login.yahoo.com
-      ].freeze
-
+      ]
+      
       option :name, 'yahoo'
 
       option :userinfo_url, "/openid/v1/userinfo"
@@ -134,7 +134,7 @@ module OmniAuth
           # JWT.decode is false since no verification key is provided.
           ::JWT::Verify.verify_claims(decoded,
                                       verify_iss: true,
-                                      iss: ALLOWED_ISSUERS,
+                                      iss: options.allowed_jwt_issuers,
                                       verify_aud: true,
                                       aud: options.client_id,
                                       verify_sub: false,

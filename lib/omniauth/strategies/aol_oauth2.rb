@@ -1,5 +1,5 @@
 # lib/omniauth/strategies/aol_oauth2.rb
-require_relative "./yahoo_oauth2"
+require_relative './yahoo_oauth2'
 
 module OmniAuth
   module Strategies

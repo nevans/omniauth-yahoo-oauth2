@@ -14,7 +14,7 @@ module OmniAuth
         api.login.yahoo.com
         login.yahoo.com
       ]
-      
+
       option :name, 'yahoo'
 
       option :userinfo_url, "/openid/v1/userinfo"

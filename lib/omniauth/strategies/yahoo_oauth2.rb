@@ -153,4 +153,4 @@ module OmniAuth
 end
 
 # for backwards compatibility
-::YahooOauth2 = ::YahooOAuth2
+YahooOauth2 = OmniAuth::Strategies::YahooOAuth2
